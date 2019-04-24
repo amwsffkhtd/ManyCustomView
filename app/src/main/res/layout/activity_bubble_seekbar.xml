@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+            <!--
+            bsb_bubble_color:气泡的颜色
+            bsb_bubble_text_color:气泡里字体的颜色
+            bsb_second_track_color：seekbar整条直线的颜色
+            bsb_track_color：seekbar被当前进度覆盖的直线的颜色
+            bsb_show_progress_in_float：是否显示float类型的数值，如果为false,则显示出来的数值是整形的。
+            bsb_show_section_mark：是否显示节点，如果为false，则bsb_section_count也没有意义了
+            bsb_touch_to_seek： 碰触到即调整进度
+            **bsb_show_section_text:这个没试出来，true or false 好像没区别
+            bsb_show_thumb_text: seekbar的下方是否显示当前进度的数值
+            bsb_section_count: 总共分几个节，与bsb_show_section_mark是有联系的。
+            bsb_section_text_position:
+            1.bottom_sides:当bsb_show_progress_in_float为true时显示浮点数
+            2.sides:无论bsb_show_progress_in_float为true或false，都显示整形
+            3.below_section_mark:节点下显示节点值
+            -->
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/bubbleSeekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="@android:color/holo_red_light"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_second_track_color="@android:color/holo_red_dark"
+                app:bsb_track_color="@android:color/holo_red_light"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_touch_to_seek="true"
+                app:bsb_max="50.0"
+                app:bsb_min="-50"
+                app:bsb_progress="0"
+                app:bsb_section_count="5"
+                app:bsb_section_text_position="bottom_sides"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                />
+
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/bubbleSeekBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="@android:color/holo_red_light"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_second_track_color="@android:color/holo_red_dark"
+                app:bsb_track_color="@android:color/holo_red_light"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_touch_to_seek="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_max="50.0"
+                app:bsb_min="-50"
+                app:bsb_progress="0"
+                app:bsb_section_count="5"
+                app:bsb_section_text_position="below_section_mark"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                />
+
+            <!--
+        bsb_auto_adjust_section_mark: bubble只会停留在节点上
+        -->
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/bubbleSeekBar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="@android:color/holo_red_light"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_second_track_color="@android:color/holo_red_dark"
+                app:bsb_track_color="@android:color/holo_red_light"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_touch_to_seek="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_auto_adjust_section_mark="true"
+                app:bsb_max="50.0"
+                app:bsb_min="-50"
+                app:bsb_progress="0"
+                app:bsb_section_count="5"
+                app:bsb_section_text_position="bottom_sides"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                />
+            <!--
+                 bsb_always_show_bubble: 气泡一直都在
+                 -->
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/bubbleSeekBar4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="@android:color/holo_red_light"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_second_track_color="@android:color/holo_red_dark"
+                app:bsb_track_color="@android:color/holo_red_light"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_touch_to_seek="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_auto_adjust_section_mark="false"
+                app:bsb_always_show_bubble="true"
+                app:bsb_max="50.0"
+                app:bsb_min="-50"
+                app:bsb_progress="0"
+                app:bsb_section_count="5"
+                app:bsb_section_text_position="bottom_sides"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="60dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

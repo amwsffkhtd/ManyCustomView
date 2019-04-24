@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Android 自带的Switch控件"
+                    />
+                <!--
+               宽度问题：
+               app:switchMinWidth: 只有switchMinWidth才能决定其宽度，layout_width对宽度不起作用
+               高度问题：
+
+               字体问题：
+               textSize：这个属性没法改变textOn与textOff的字体大小，没什么用处。
+
+               样式问题:
+               app:track：底部的样式，必须是drawable.
+               android:thumb：滑动按钮的样式，必须是drawable.
+           -->
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    app:showText="true"
+                    android:textOn="on"
+                    android:textOff="off"
+
+                    app:track="@drawable/switch_track_selector"
+                    android:thumb="@drawable/switch_thumb_selector"
+                    app:switchMinWidth="50dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="第三方Switch控件-RMSwitch,可定义thumb的图片，并支持三个状态"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <com.rm.rmswitch.RMTristateSwitch
+                    android:id="@+id/rm_triswitch1"
+                    android:layout_width="86dp"
+                    android:layout_height="40dp"
+                    app:forceAspectRatio="false"
+                    app:state="left"
+                    app:switchBkgLeftColor="@android:color/holo_red_light"
+                    app:switchBkgMiddleColor="@android:color/darker_gray"
+                    app:switchBkgRightColor="@android:color/holo_green_light"
+                    app:switchToggleLeftColor="@android:color/holo_red_light"
+                    app:switchToggleLeftImage="@drawable/ic_sad"
+                    app:switchToggleMiddleColor="@android:color/darker_gray"
+                    app:switchToggleMiddleImage="@drawable/ic_x"
+                    app:switchToggleRightColor="@android:color/holo_green_light"
+                    app:switchToggleRightImage="@drawable/ic_happy"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <com.rm.rmswitch.RMTristateSwitch
+                    android:id="@+id/rm_triswitch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:right_to_left="true"
+                    app:state="right"
+                    app:switchToggleLeftColor="@color/colorPrimary"
+                    app:switchToggleLeftImage="@drawable/ic_happy"
+                    app:switchToggleMiddleColor="@color/colorPrimary"
+                    app:switchToggleMiddleImage="@drawable/ic_x"
+                    app:switchToggleRightColor="@color/colorPrimary"
+                    app:switchToggleRightImage="@drawable/ic_sad"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+                <com.rm.rmswitch.RMTristateSwitch
+                    android:id="@+id/rm_triswitch6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:switchBkgLeftColor="@android:color/holo_orange_light"
+                    app:switchDesign="android"
+                    app:switchToggleLeftColor="@android:color/darker_gray"
+                    app:switchToggleMiddleColor="@android:color/darker_gray"
+                    app:switchToggleRightColor="@android:color/darker_gray"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+                <!--
+                ##########Issue : 当RMSwitch的switchDesign = large(默认)时，不能定义thumb的图片。否则程序崩溃
+                -->
+                <!--
+         <com.rm.rmswitch.RMSwitch
+                  android:id="@+id/rm_switch7"
+                  android:layout_width="56dp"
+                  android:layout_height="40dp"
+                  app:checked="true"
+                  app:forceAspectRatio="false"
+                  app:switchBkgCheckedColor="@android:color/holo_green_light"
+                  app:switchBkgNotCheckedColor="@android:color/holo_red_light"
+                  app:switchToggleCheckedColor="@android:color/holo_green_light"
+                  app:switchToggleCheckedImage="@drawable/ic_happy"
+                  app:switchToggleNotCheckedColor="@android:color/holo_red_light"
+                  app:switchToggleNotCheckedImage="@drawable/ic_sad"
+                    android:layout_marginTop="20dp"
+                  />
+-->
+
+                <com.rm.rmswitch.RMSwitch
+                    android:id="@+id/rm_switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:switchDesign="slim"
+                    app:switchBkgCheckedColor="@android:color/holo_blue_light"
+                    app:switchBkgNotCheckedColor="@android:color/holo_orange_light"
+                    app:switchToggleCheckedColor="@android:color/holo_blue_dark"
+                    app:switchToggleNotCheckedColor="@android:color/holo_orange_dark"
+                    app:switchToggleNotCheckedImage="@drawable/ic_happy"
+                    app:switchToggleCheckedImage="@drawable/ic_sad"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+                <com.rm.rmswitch.RMSwitch
+                    android:id="@+id/rm_switch9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:switchDesign="android"
+                    app:switchToggleNotCheckedColor="@android:color/darker_gray"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+
+                <!--
+                si_no_dash:表示不可用的那道斜杠
+                si_disabled_color：不可用的颜色
+                si_tint_color：可用的颜色
+                -->
+                <com.github.zagum.switchicon.SwitchIconView
+                    android:id="@+id/switch_icon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    app:si_animation_duration="200"
+                    app:si_disabled_alpha=".3"
+                    app:si_disabled_color="#b7b7b7"
+                    app:si_tint_color="#ff3c00"
+                    app:si_enabled="false"
+                    app:si_no_dash="false"
+
+                    app:srcCompat="@drawable/ic_clound"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点那朵云"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="第三方SwitchButton,主要在宽度和颜色上的定义比Android自带的Switch要友好得多"
+
+                    />
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    />
+                <com.kyleduo.switchbutton.SwitchButton
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    />
+                <com.kyleduo.switchbutton.SwitchButton
+                    style="@style/SwitchButtonStyleMD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    />
+                <!--
+                宽度问题：
+                1. kswThumbWidth 与 kswThumbHeight 都存在时（没有kswThumbRangeRatio），这两属性就能决定track的宽度，此时layout_width的值不能影响track的宽度
+                2.当只有kswThumbHeight，没有kswThumbWidth时（没有kswThumbRangeRatio），由layout_width决定track的宽度
+                3. kswThumbRangeRatio：thumb的宽度是track的几份之一，当kswThumbRangeRatio=3，kswThumbWidth=20dp,那么track的宽度就为60dp
+                -->
+                <com.kyleduo.switchbutton.SwitchButton
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:background="#E0E0E0"
+                    app:kswThumbWidth="30dp"
+                    app:kswThumbHeight="30dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:kswBackRadius="2dp"
+                    app:kswThumbRadius="2dp"
+                    app:kswThumbRangeRatio="2"
+                    app:kswTintColor="@android:color/holo_green_light"
+                    app:kswThumbHeight="30dp"
+                    app:kswThumbWidth="30dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <!--
+                重点关注 kswThumbMargin ，可取正数，也可取负数。
+                -->
+                <com.kyleduo.switchbutton.SwitchButton
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    app:kswThumbMargin="-2dp"
+                    app:kswThumbWidth="40dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <!--
+                app:kswTextExtra: kswText 与 thumb的距离，值越大，会压缩thumb的宽度。
+                -->
+                <com.kyleduo.switchbutton.SwitchButton
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="16dp"
+                    app:kswTextExtra="10dp"
+                    app:kswTextAdjust="-2dp"
+                    app:kswTextOff="OFF"
+                    app:kswTextOn="ON"
+                    app:kswThumbHeight="30dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <!--
+                    kswBackDrawable  kswThumbDrawable  可以定义任何自己想要的样式 。
+                -->
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_custom_flyme"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:kswBackDrawable="@drawable/switch_track_selector_flyme"
+                    app:kswThumbDrawable="@drawable/switch_thumb_selector_flyme"
+                    app:kswThumbHeight="16dp"
+                    app:kswThumbRangeRatio="2.2"
+                    app:kswThumbWidth="16dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_ios"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:kswAnimationDuration="300"
+                    app:kswBackDrawable="@drawable/switch_track_selector_ios"
+                    app:kswThumbDrawable="@drawable/switch_thumb_selector_ios"
+                    app:kswThumbMarginBottom="-8dp"
+                    app:kswThumbMarginLeft="-5dp"
+                    app:kswThumbMarginRight="-5dp"
+                    app:kswThumbMarginTop="-2.5dp"
+                    app:kswThumbRangeRatio="1.4"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
