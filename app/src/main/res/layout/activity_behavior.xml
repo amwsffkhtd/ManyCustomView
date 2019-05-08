@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="什么是Behavior: Behavior 是把页面中可滚动控件的滚动事件和其他任何对这个滚动事件有兴趣的控件结合起来。"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="1.先来看一下BottomSheet的简单应用" />
+
+        <Button
+            android:id="@+id/btn_bottom_sheet_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bottom_sheet_Behavior+recyclerview" />
+        <Button
+            android:id="@+id/btn_bottom_sheet_dialog_nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bottom_sheet_Dialog+NestedScrollView" />
+        <Button
+            android:id="@+id/btn_bottom_sheet_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bottom_sheet_Dialog+Recyclerview" />
+
+        <Button
+            android:id="@+id/btn_appbarlayout_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="appbarlayout+behavior" />
+        <Button
+            android:id="@+id/btn_collaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CollapsingToolbarLayout" />
+    </LinearLayout>
+
+    <!--
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width=""
+        android:layout_height=""></com.google.android.material.bottomnavigation.BottomNavigationView>
+     -->
+    <RelativeLayout
+        android:id="@+id/layout_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="300dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:background="@android:color/white"
+        >
+        <TextView
+            android:id="@+id/tv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="列表"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            android:background="@android:color/holo_orange_light"
+
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_list"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

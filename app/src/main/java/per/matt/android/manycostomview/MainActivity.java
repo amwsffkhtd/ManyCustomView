@@ -1,18 +1,21 @@
 package per.matt.android.manycostomview;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 
 import per.matt.android.manycostomview.activities.BackGroundActivity;
+import per.matt.android.manycostomview.activities.BehaviorActivity;
 import per.matt.android.manycostomview.activities.BubbleSeekbarActivity;
 import per.matt.android.manycostomview.activities.DialogActivity;
+import per.matt.android.manycostomview.activities.DotsIndicatorActivity;
 import per.matt.android.manycostomview.activities.LoadingViewsActivity;
+import per.matt.android.manycostomview.activities.PopupWindowActivity;
+import per.matt.android.manycostomview.activities.RecyclerviewActivity;
 import per.matt.android.manycostomview.activities.ShapeViewsActivity;
 import per.matt.android.manycostomview.activities.SwitchButtonActivity;
 import per.matt.android.manycostomview.activities.ToastActivity;
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private Button  btn_dialog;
     private Button  btn_switch_button;
     private Button  btn_shape_views;
+    private Button  btn_dots_indicator;
+    private Button  btn_behavior;
 
 
     @Override
@@ -35,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext=this;
+
+
+        Button btn_test = findViewById(R.id.btn_test);
+        btn_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         btn_common_background = findViewById(R.id.btn_common_background);
         btn_common_background.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +107,42 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, ShapeViewsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_dots_indicator= findViewById(R.id.btn_dots_indicator);
+        btn_dots_indicator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, DotsIndicatorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_behavior= findViewById(R.id.btn_behavior);
+        btn_behavior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, BehaviorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_recyclerview= findViewById(R.id.btn_recyclerview);
+        btn_recyclerview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, RecyclerviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_popupwindow= findViewById(R.id.btn_popupwindow);
+        btn_popupwindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, PopupWindowActivity.class);
                 startActivity(intent);
             }
         });

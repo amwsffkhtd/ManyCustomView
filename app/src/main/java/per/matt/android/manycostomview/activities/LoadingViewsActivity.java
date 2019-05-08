@@ -2,7 +2,7 @@ package per.matt.android.manycostomview.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import per.matt.android.manycostomview.R;
 

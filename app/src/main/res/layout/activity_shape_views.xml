@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,26 +29,48 @@
                     android:src="@drawable/lyf"
                     />
             </com.github.florent37.shapeofview.shapes.CircleView>
-            <com.github.florent37.shapeofview.shapes.RoundRectView
-                android:layout_width="150dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:elevation="4dp"
-                app:shape_roundRect_bottomLeftRadius="10dp"
-                app:shape_roundRect_bottomRightRadius="10dp"
-                app:shape_roundRect_topLeftRadius="10dp"
-                app:shape_roundRect_topRightRadius="10dp"
-
-                app:shape_roundRect_borderColor="@android:color/black"
-                app:shape_roundRect_borderWidth="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
                 >
-                <ImageView
-                    android:layout_width="match_parent"
+
+                <com.github.florent37.shapeofview.shapes.RoundRectView
+                    android:id="@+id/roundRectView"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/lyf"
+                    android:elevation="4dp"
+                    app:shape_roundRect_bottomLeftRadius="10dp"
+                    app:shape_roundRect_bottomRightRadius="10dp"
+                    app:shape_roundRect_topLeftRadius="10dp"
+                    app:shape_roundRect_topRightRadius="10dp"
+
+                    app:shape_roundRect_borderColor="@android:color/black"
+                    app:shape_roundRect_borderWidth="2dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lyf"
+                        />
+                </com.github.florent37.shapeofview.shapes.RoundRectView>
+                <Button
+                    android:id="@+id/btn_roundRectView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点我"
                     />
-            </com.github.florent37.shapeofview.shapes.RoundRectView>
+                <Button
+                    android:id="@+id/btn_roundRectView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点我"
+                    />
+            </LinearLayout>
+
 
             <com.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/clipCorner"
@@ -83,7 +105,23 @@
                 android:elevation="4dp"
                 app:shape_arc_height="20dp"
                 app:shape_arc_position="bottom"
-                app:shape_arc_cropDirection="outside"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lyf"
+                    />
+
+            </com.github.florent37.shapeofview.shapes.ArcView>
+
+            <com.github.florent37.shapeofview.shapes.ArcView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:elevation="4dp"
+                app:shape_arc_height="-20dp"
+                app:shape_arc_position="bottom"
                 android:layout_marginTop="10dp"
                 >
                 <ImageView
@@ -172,13 +210,16 @@
                     />
 
             </com.github.florent37.shapeofview.shapes.PolygonView>
-            <!--
+
             <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 app:shape_dot_radius="3dp"
                 app:shape_dot_spacing="2dp"
                 app:shape_edge_position="right|left"
+
+                app:shape_dottedEdgesCutCorner_topLeftSize="8dp"
+                app:shape_dottedEdgesCutCorner_topRightSize="8dp"
                 app:shape_dottedEdgesCutCorner_bottomLeftSize="8dp"
                 app:shape_dottedEdgesCutCorner_bottomRightSize="8dp"
                 android:layout_marginTop="10dp"
@@ -190,10 +231,10 @@
                     android:src="@drawable/lyf"
                     />
             </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
-            -->
+
         </LinearLayout>
     </ScrollView>
 
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

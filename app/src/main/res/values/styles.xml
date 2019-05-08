@@ -29,4 +29,13 @@
         <item name="android:paddingBottom">4dp</item>
     </style>
 
+    <style name="PeekHeightBottomSheetDialogStyle"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
+    </style>
+
+    <style name="BottomSheetModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">300dp</item>
+    </style>
+
 </resources>

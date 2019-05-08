@@ -28,6 +28,13 @@
         <activity android:name=".activities.DialogActivity"></activity>
         <activity android:name=".activities.SwitchButtonActivity"></activity>
         <activity android:name=".activities.ShapeViewsActivity"></activity>
+        <activity android:name=".activities.DotsIndicatorActivity"></activity>
+        <activity android:name=".activities.BehaviorActivity"></activity>
+        <activity android:name=".activities.AppbarlayoutBehaviorActivity"></activity>
+        <activity android:name=".activities.CollapsingActivity"></activity>
+        <activity android:name=".activities.RecyclerviewActivity"></activity>
+        <activity android:name=".activities.GroupSuspendRecyclerviewActivity"></activity>
+        <activity android:name=".activities.PopupWindowActivity"></activity>
     </application>
 
 </manifest>

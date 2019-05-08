@@ -3,7 +3,7 @@ package per.matt.android.manycostomview.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.cy.dialog.BaseDialog;
 
 import per.matt.android.manycostomview.R;
-import xyz.bboylin.universialtoast.UniversalToast;
 
 public class DialogActivity extends Activity {
 
