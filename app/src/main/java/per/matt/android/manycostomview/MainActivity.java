@@ -17,6 +17,7 @@ import per.matt.android.manycostomview.activities.LoadingViewsActivity;
 import per.matt.android.manycostomview.activities.PopupWindowActivity;
 import per.matt.android.manycostomview.activities.RecyclerviewActivity;
 import per.matt.android.manycostomview.activities.ShapeViewsActivity;
+import per.matt.android.manycostomview.activities.StatusbarActivity;
 import per.matt.android.manycostomview.activities.SwitchButtonActivity;
 import per.matt.android.manycostomview.activities.ToastActivity;
 
@@ -47,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+
+        Button btn_statusbar = findViewById(R.id.btn_statusbar);
+        btn_statusbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, StatusbarActivity.class);
+                startActivity(intent);
             }
         });
 

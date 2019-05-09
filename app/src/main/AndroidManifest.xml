@@ -35,6 +35,31 @@
         <activity android:name=".activities.RecyclerviewActivity"></activity>
         <activity android:name=".activities.GroupSuspendRecyclerviewActivity"></activity>
         <activity android:name=".activities.PopupWindowActivity"></activity>
+        <activity android:name=".activities.StatusbarActivity"
+            android:label="Statusbar"
+            ></activity>
+        <activity android:name=".activities.StatusbarColorTranspActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.StatusbarTransparentActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.StatusbarImageviewActivity"
+            android:theme="@style/AppThemeNoActionBarSlidr"
+            ></activity>
+        <activity android:name=".activities.StatusbarUseInFragmentActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.StatusbarSwipeBackActivity"
+            android:theme="@style/AppThemeNoActionBarSlidr"
+            ></activity>
+
+        <activity android:name=".activities.StatusbarLightDarkActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.StatusbarDrawerlayoutActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
     </application>
 
 </manifest>
