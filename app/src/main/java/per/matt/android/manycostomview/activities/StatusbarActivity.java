@@ -21,8 +21,6 @@ public class StatusbarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_statusbar);
         mContext=this;
 
-
-
         Button btn_set_color_transparency = findViewById(R.id.btn_set_color_transparency);
         btn_set_color_transparency.setOnClickListener(new View.OnClickListener() {
             @Override

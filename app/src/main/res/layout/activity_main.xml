@@ -16,11 +16,19 @@
             android:padding="10dp"
             >
 
+
+
             <Button
                 android:id="@+id/btn_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="test"
+                />
+            <Button
+                android:id="@+id/btn_expandpanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expand Pannel"
                 />
             <Button
                 android:id="@+id/btn_statusbar"

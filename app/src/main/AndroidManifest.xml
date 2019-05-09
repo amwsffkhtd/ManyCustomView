@@ -60,6 +60,13 @@
         <activity android:name=".activities.StatusbarDrawerlayoutActivity"
             android:theme="@style/AppThemeNoActionBar"
             ></activity>
+
+        <activity android:name=".activities.ExpandpanelActivity"
+            android:label="Expandpanel"
+            ></activity>
+        <activity android:name=".activities.ExpandpanelRecyclerviewActivity"
+            android:label="Expandpanel Recyclerview"
+            ></activity>
     </application>
 
 </manifest>

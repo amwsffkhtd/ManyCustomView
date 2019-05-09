@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Expandable Panel应用在Recyclerview上时，仍需自己手动处理Item被回收时Expandable Panel的打开关闭状态。所以实际上没什么用"
+            />
+        <com.github.florent37.expansionpanel.viewgroup.ExpansionsViewGroupLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:expansion_openOnlyOne="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expansion_headerIndicator="@id/headerIndicator"
+                    app:expansion_layout="@id/expansionLayout"
+                    app:expansion_toggleOnClick="true"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@android:color/holo_orange_light"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Center"
+                            android:textSize="18sp"
+                            android:layout_centerInParent="true"
+                            />
+                        <!-- HEADER INDICATOR -->
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_right_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/colorAccent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Content"
+                            android:textSize="22sp"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+                    <!-- CONTENT -->
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expansion_headerIndicator="@id/headerIndicator1"
+                    app:expansion_layout="@id/expansionLayout1"
+                    app:expansion_toggleOnClick="true"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@android:color/holo_orange_light"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Second"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Center"
+                            android:textSize="18sp"
+                            android:layout_centerInParent="true"
+                            />
+                        <!-- HEADER INDICATOR -->
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator1"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_right_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayout1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/colorAccent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Content"
+                            android:textSize="22sp"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+                    <!-- CONTENT -->
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expansion_headerIndicator="@id/headerIndicator2"
+                    app:expansion_layout="@id/expansionLayout2"
+                    app:expansion_toggleOnClick="true"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@android:color/holo_orange_light"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Third"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Center"
+                            android:textSize="18sp"
+                            android:layout_centerInParent="true"
+                            />
+                        <!-- HEADER INDICATOR -->
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator2"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_right_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayout2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/colorAccent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Content"
+                            android:textSize="22sp"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+                    <!-- CONTENT -->
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+            </LinearLayout>
+        </com.github.florent37.expansionpanel.viewgroup.ExpansionsViewGroupLinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

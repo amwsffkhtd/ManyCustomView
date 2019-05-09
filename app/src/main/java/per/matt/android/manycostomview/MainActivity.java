@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +12,7 @@ import per.matt.android.manycostomview.activities.BehaviorActivity;
 import per.matt.android.manycostomview.activities.BubbleSeekbarActivity;
 import per.matt.android.manycostomview.activities.DialogActivity;
 import per.matt.android.manycostomview.activities.DotsIndicatorActivity;
+import per.matt.android.manycostomview.activities.ExpandpanelActivity;
 import per.matt.android.manycostomview.activities.LoadingViewsActivity;
 import per.matt.android.manycostomview.activities.PopupWindowActivity;
 import per.matt.android.manycostomview.activities.RecyclerviewActivity;
@@ -48,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+
+        Button btn_expandpanel = findViewById(R.id.btn_expandpanel);
+        btn_expandpanel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ExpandpanelActivity.class);
+                startActivity(intent);
             }
         });
 
