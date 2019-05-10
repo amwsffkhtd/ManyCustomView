@@ -18,6 +18,7 @@ import per.matt.android.manycostomview.activities.NewbieGuideActivity;
 import per.matt.android.manycostomview.activities.PopupWindowActivity;
 import per.matt.android.manycostomview.activities.RecyclerviewActivity;
 import per.matt.android.manycostomview.activities.ShapeViewsActivity;
+import per.matt.android.manycostomview.activities.SkeletonRecyclerviewActivity;
 import per.matt.android.manycostomview.activities.StatusbarActivity;
 import per.matt.android.manycostomview.activities.StepViewActivity;
 import per.matt.android.manycostomview.activities.SwitchButtonActivity;
@@ -43,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext=this;
+
+        Button btn_skeleton = findViewById(R.id.btn_skeleton);
+        btn_skeleton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, SkeletonRecyclerviewActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button btn_step_view = findViewById(R.id.btn_step_view);
         btn_step_view.setOnClickListener(new View.OnClickListener() {

@@ -70,6 +70,9 @@
         <activity android:name=".activities.StepViewActivity"
             android:label="Step View"
             ></activity>
+        <activity android:name=".activities.SkeletonRecyclerviewActivity"
+            android:label="预占位布局"
+            ></activity>
     </application>
 
 </manifest>

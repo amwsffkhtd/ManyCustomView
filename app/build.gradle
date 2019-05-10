@@ -56,4 +56,7 @@ dependencies {
     implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
     //Step View
     implementation 'com.github.baoyachi:StepView:1.9'
+    //预占位
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
