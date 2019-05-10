@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="lightGray">#E5E5E5</color>
-
+    <!--32是透明度，0-255，0是完全透明，255是完全不透明-->
+    <color name="translucent">#50000000</color>
+    <color name="transparent">#70303F9F</color>
 </resources>

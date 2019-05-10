@@ -15,27 +15,68 @@
             android:orientation="vertical"
             android:padding="10dp"
             >
-
-
-
-            <Button
-                android:id="@+id/btn_test"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="test"
-                />
-            <Button
-                android:id="@+id/btn_expandpanel"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_step_view"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Step View"
+                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Expand Pannel"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Expand Pannel"
-                />
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_newbie_guide"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="新手引导"
+                    />
+                <Button
+                    android:id="@+id/btn_expandpanel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Expand Pannel"
+                    />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
             <Button
                 android:id="@+id/btn_statusbar"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Statusbar"
                 />
+            <Button
+                android:id="@+id/btn_bubble_seekbar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Bubble Seekbar"
+                />
+        </LinearLayout>
+
             <Button
                 android:id="@+id/btn_common_background"
                 android:layout_width="match_parent"
@@ -48,62 +89,91 @@
                 android:layout_height="wrap_content"
                 android:text="各种加载(loading)控件"
                 />
-            <Button
-                android:id="@+id/btn_bubble_seekbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bubble Seekbar"
-                />
-            <Button
-                android:id="@+id/btn_toast"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Toast"
-                />
-            <Button
-            android:id="@+id/btn_dialog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="dialog"
-            />
-            <Button
-                android:id="@+id/btn_switch_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="switch button"
-                />
-            <Button
-                android:id="@+id/btn_shape_views"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="shape views"
-                />
-            <Button
-                android:id="@+id/btn_dots_indicator"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dots Indicator"
-                />
 
-            <Button
-                android:id="@+id/btn_behavior"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Behavior练习"
-                />
-            <Button
-                android:id="@+id/btn_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Recyclerview"
-                />
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_toast"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Toast"
+                    />
+                <Button
+                    android:id="@+id/btn_dialog"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="dialog"
+                    />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_popupwindow"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Popup_window"
-                />
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_switch_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="switch button"
+                    />
+                <Button
+                    android:id="@+id/btn_shape_views"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="shape views"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_dots_indicator"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Dots Indicator"
+                    />
+
+                <Button
+                    android:id="@+id/btn_behavior"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Behavior练习"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_recyclerview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Recyclerview"
+                    />
+
+                <Button
+                    android:id="@+id/btn_popupwindow"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Popup_window"
+                    />
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

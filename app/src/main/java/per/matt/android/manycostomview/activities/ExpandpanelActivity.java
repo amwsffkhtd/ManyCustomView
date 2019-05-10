@@ -16,7 +16,6 @@ import per.matt.android.manycostomview.R;
 public class ExpandpanelActivity extends AppCompatActivity {
     ExpansionLayout expansionLayout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

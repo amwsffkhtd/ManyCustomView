@@ -14,10 +14,12 @@ import per.matt.android.manycostomview.activities.DialogActivity;
 import per.matt.android.manycostomview.activities.DotsIndicatorActivity;
 import per.matt.android.manycostomview.activities.ExpandpanelActivity;
 import per.matt.android.manycostomview.activities.LoadingViewsActivity;
+import per.matt.android.manycostomview.activities.NewbieGuideActivity;
 import per.matt.android.manycostomview.activities.PopupWindowActivity;
 import per.matt.android.manycostomview.activities.RecyclerviewActivity;
 import per.matt.android.manycostomview.activities.ShapeViewsActivity;
 import per.matt.android.manycostomview.activities.StatusbarActivity;
+import per.matt.android.manycostomview.activities.StepViewActivity;
 import per.matt.android.manycostomview.activities.SwitchButtonActivity;
 import per.matt.android.manycostomview.activities.ToastActivity;
 
@@ -42,12 +44,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mContext=this;
 
-
-        Button btn_test = findViewById(R.id.btn_test);
-        btn_test.setOnClickListener(new View.OnClickListener() {
+        Button btn_step_view = findViewById(R.id.btn_step_view);
+        btn_step_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(mContext, StepViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
+
+        Button btn_newbie_guide = findViewById(R.id.btn_newbie_guide);
+        btn_newbie_guide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, NewbieGuideActivity.class);
+                startActivity(intent);
             }
         });
 

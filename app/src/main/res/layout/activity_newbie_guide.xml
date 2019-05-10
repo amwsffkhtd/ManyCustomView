@@ -4,52 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            app:title="Newbie Guide"
             android:background="@color/colorPrimary"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-
-          >
+            >
         </androidx.appcompat.widget.Toolbar>
-
-        <TextView
+        <Button
+            android:id="@+id/btn_member"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="改变普通Activity上的状态栏的颜色或透明度"
-            android:layout_margin="20dp"
+            android:text="会员"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="100dp"
             />
 
         <Button
-            android:id="@+id/btn_color"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="change color"
-            android:layout_margin="20dp"
-            />
-
-        <TextView
-            android:id="@+id/tv_progress"
+            android:id="@+id/btn_member1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorAccent"
+            android:text="会员1"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="200dp"
             />
-        <SeekBar
-            android:id="@+id/sb_change_alpha"
-            android:layout_width="match_parent"
+
+
+        <Button
+            android:id="@+id/btn_member2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
-    </LinearLayout>
+            android:text="会员2"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="300dp"
+            />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
