@@ -10,9 +10,12 @@ import android.widget.Button;
 import per.matt.android.manycostomview.activities.BackGroundActivity;
 import per.matt.android.manycostomview.activities.BehaviorActivity;
 import per.matt.android.manycostomview.activities.BubbleSeekbarActivity;
+import per.matt.android.manycostomview.activities.CaptchaSlipActivity;
 import per.matt.android.manycostomview.activities.DialogActivity;
 import per.matt.android.manycostomview.activities.DotsIndicatorActivity;
+import per.matt.android.manycostomview.activities.DsPickerActivity;
 import per.matt.android.manycostomview.activities.ExpandpanelActivity;
+import per.matt.android.manycostomview.activities.FloatWindowAActivity;
 import per.matt.android.manycostomview.activities.LoadingViewsActivity;
 import per.matt.android.manycostomview.activities.NewbieGuideActivity;
 import per.matt.android.manycostomview.activities.PopupWindowActivity;
@@ -44,6 +47,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext=this;
+
+        Button btn_ds_picker = findViewById(R.id.btn_ds_picker);
+        btn_ds_picker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, DsPickerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_slip_captcha = findViewById(R.id.btn_slip_captcha);
+        btn_slip_captcha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, CaptchaSlipActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_float_window = findViewById(R.id.btn_float_window);
+        btn_float_window.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FloatWindowAActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button btn_skeleton = findViewById(R.id.btn_skeleton);
         btn_skeleton.setOnClickListener(new View.OnClickListener() {

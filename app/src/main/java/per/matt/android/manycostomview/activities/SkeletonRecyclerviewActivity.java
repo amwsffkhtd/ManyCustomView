@@ -53,7 +53,7 @@ public class SkeletonRecyclerviewActivity extends AppCompatActivity {
                 .adapter(adapter)
                 .shimmer(true)      // whether show shimmer animation.                      default is true
                 .count(10)          // the recycler view item count.                        default is 10
-                .color(R.color.transparent)       // the shimmer color.                     default is #a2878787
+                .color(R.color.skeleton_translucent)       // the shimmer color.                     default is #a2878787
                 .angle(20)          // the shimmer angle.                                   default is 20;
                 .duration(1000)     // the shimmer animation duration.                      default is 1000;
                 .frozen(false)      // whether frozen recyclerView during skeleton showing  default is true;

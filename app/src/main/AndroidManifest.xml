@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="per.matt.android.manycostomview">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -72,6 +74,24 @@
             ></activity>
         <activity android:name=".activities.SkeletonRecyclerviewActivity"
             android:label="预占位布局"
+            ></activity>
+        <activity android:name=".activities.FloatWindowAActivity"
+            android:label="A_Activity"
+            ></activity>
+        <activity android:name=".activities.FloatWindowBActivity"
+            android:label="B_Activity"
+            ></activity>
+        <activity android:name=".activities.FloatWindowCActivity"
+            android:label="C_Activity"
+            ></activity>
+        <activity android:name=".activities.CaptchaSlipActivity"
+            android:label="Slip Captcha"
+            ></activity>
+        <activity android:name=".activities.DsPickerActivity"
+            android:label="全屏选择器"
+            ></activity>
+        <activity android:name=".activities.DsPickerAdvancedActivity"
+            android:label="全屏选择器"
             ></activity>
     </application>
 

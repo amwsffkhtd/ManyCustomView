@@ -6,5 +6,15 @@
     <color name="lightGray">#E5E5E5</color>
     <!--32是透明度，0-255，0是完全透明，255是完全不透明-->
     <color name="translucent">#50000000</color>
-    <color name="transparent">#70303F9F</color>
+    <color name="transparent">#00000000</color>
+    <color name="skeleton_translucent">#70303F9F</color>
+
+    <color name="ds_picker_box_bg">#67f45959</color>
+    <color name="ds_list_selector_bg">#49067397</color>
+    <color name="ds_list_bg">#ffffff</color>
+
+    <color name="selector_border">#dedede</color>
+    <color name="picker_box_border">#9f9f9f</color>
+    <color name="picker_box_bg">#ffffff</color>
+    <color name="picker_list_text">#232323</color>
 </resources>

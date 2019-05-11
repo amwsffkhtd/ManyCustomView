@@ -59,4 +59,14 @@ dependencies {
     //预占位
     implementation 'com.ethanhua:skeleton:1.1.2'
     implementation 'io.supercharge:shimmerlayout:2.1.0'
+    //换肤
+    implementation 'skin.support:skin-support:4.0.1'
+    implementation 'skin.support:skin-support-design:3.1.1'            // skin-support-design material design 控件支持[可选]
+    implementation 'skin.support:skin-support-cardview:3.1.1'          // skin-support-cardview CardView 控件支持[可选]
+    implementation 'skin.support:skin-support-constraint-layout:3.1.1' // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+    //FloatWindow
+    implementation 'com.github.yhaolpz:FloatWindow:1.0.9'
+    //全屏选择器
+    implementation 'com.ramotion.directselect:direct-select:0.1.1'
+
 }
