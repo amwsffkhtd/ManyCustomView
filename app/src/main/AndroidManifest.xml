@@ -91,7 +91,10 @@
             android:label="全屏选择器"
             ></activity>
         <activity android:name=".activities.DsPickerAdvancedActivity"
-            android:label="全屏选择器"
+        android:label="全屏选择器"
+        ></activity>
+        <activity android:name=".activities.CardSliderActivity"
+            android:label="CardSlider"
             ></activity>
     </application>
 

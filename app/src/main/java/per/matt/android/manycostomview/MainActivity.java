@@ -11,6 +11,7 @@ import per.matt.android.manycostomview.activities.BackGroundActivity;
 import per.matt.android.manycostomview.activities.BehaviorActivity;
 import per.matt.android.manycostomview.activities.BubbleSeekbarActivity;
 import per.matt.android.manycostomview.activities.CaptchaSlipActivity;
+import per.matt.android.manycostomview.activities.CardSliderActivity;
 import per.matt.android.manycostomview.activities.DialogActivity;
 import per.matt.android.manycostomview.activities.DotsIndicatorActivity;
 import per.matt.android.manycostomview.activities.DsPickerActivity;
@@ -47,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext=this;
+
+
+        Button btn_cardslider = findViewById(R.id.btn_cardslider);
+        btn_cardslider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, CardSliderActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button btn_ds_picker = findViewById(R.id.btn_ds_picker);
         btn_ds_picker.setOnClickListener(new View.OnClickListener() {

@@ -68,5 +68,7 @@ dependencies {
     implementation 'com.github.yhaolpz:FloatWindow:1.0.9'
     //全屏选择器
     implementation 'com.ramotion.directselect:direct-select:0.1.1'
+    //Slider card
+    implementation 'com.ramotion.cardslider:card-slider:0.3.1'
 
 }
