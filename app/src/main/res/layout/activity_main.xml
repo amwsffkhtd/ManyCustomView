@@ -15,6 +15,22 @@
             android:orientation="vertical"
             android:padding="10dp"
             >
+
+            <Button
+                android:id="@+id/btn_recyclerview_collect"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Recyclerview 汇总"
+                />
+            <Button
+                android:id="@+id/btn_viewpage_collect"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Viewpager 汇总"
+                />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

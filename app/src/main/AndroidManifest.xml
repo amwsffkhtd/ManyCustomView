@@ -96,6 +96,30 @@
         <activity android:name=".activities.CardSliderActivity"
             android:label="CardSlider"
             ></activity>
+        <activity android:name=".activities.RecyclerviewCollectActivity"
+            android:label="Recyclerview汇总"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewMultiActivity"
+            android:label="多功能Recyclerview"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeMenuActivity"
+            android:label="多功能Recyclerview之侧滑菜单"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeListActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeGridActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeViewTypeActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeVerticalActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeDefineActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
     </application>
 
 </manifest>

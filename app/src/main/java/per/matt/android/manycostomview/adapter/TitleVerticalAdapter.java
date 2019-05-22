@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -17,17 +16,17 @@ import per.matt.android.manycostomview.R;
  * Created by matth on 2018/7/31.
  */
 
-public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHolder> {
+public class TitleVerticalAdapter extends RecyclerView.Adapter<TitleVerticalAdapter.ReportViewHolder> {
 
     private List<String> mList;
 
-    public TitleAdapter(List<String> list) {
+    public TitleVerticalAdapter(List<String> list) {
         this.mList = list;
     }
 
     @Override
     public ReportViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title_vertical, parent, false);
         ReportViewHolder limitViewHolder = new ReportViewHolder(view);
         return limitViewHolder;
     }

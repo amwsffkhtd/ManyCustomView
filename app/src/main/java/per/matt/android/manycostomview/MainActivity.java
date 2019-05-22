@@ -21,6 +21,7 @@ import per.matt.android.manycostomview.activities.LoadingViewsActivity;
 import per.matt.android.manycostomview.activities.NewbieGuideActivity;
 import per.matt.android.manycostomview.activities.PopupWindowActivity;
 import per.matt.android.manycostomview.activities.RecyclerviewActivity;
+import per.matt.android.manycostomview.activities.RecyclerviewCollectActivity;
 import per.matt.android.manycostomview.activities.ShapeViewsActivity;
 import per.matt.android.manycostomview.activities.SkeletonRecyclerviewActivity;
 import per.matt.android.manycostomview.activities.StatusbarActivity;
@@ -49,6 +50,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mContext=this;
 
+
+        Button btn_recyclerview_collect = findViewById(R.id.btn_recyclerview_collect);
+        btn_recyclerview_collect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, RecyclerviewCollectActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_viewpage_collect = findViewById(R.id.btn_viewpage_collect);
+        btn_viewpage_collect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, CardSliderActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button btn_cardslider = findViewById(R.id.btn_cardslider);
         btn_cardslider.setOnClickListener(new View.OnClickListener() {

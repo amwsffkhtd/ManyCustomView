@@ -3,8 +3,8 @@ package per.matt.android.manycostomview.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
-
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,17 +17,17 @@ import per.matt.android.manycostomview.R;
  * Created by matth on 2018/7/31.
  */
 
-public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHolder> {
+public class TitleDefineAdapter extends RecyclerView.Adapter<TitleDefineAdapter.ReportViewHolder> {
 
     private List<String> mList;
 
-    public TitleAdapter(List<String> list) {
+    public TitleDefineAdapter(List<String> list) {
         this.mList = list;
     }
 
     @Override
     public ReportViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_define, parent, false);
         ReportViewHolder limitViewHolder = new ReportViewHolder(view);
         return limitViewHolder;
     }
@@ -39,7 +39,7 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHo
 
     @Override
     public void onBindViewHolder(final ReportViewHolder holder, int position) {
-        holder.tv_title.setText(mList.get(position));
+        holder.btn_start.setText(mList.get(position));
     }
 
     @Override
@@ -49,11 +49,15 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHo
 
     class ReportViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_title;
+        Button btn_start;
+        Button left_view;
+        Button right_view;
 
         public ReportViewHolder(View itemView) {
             super(itemView);
-            tv_title = itemView.findViewById(R.id.tv_title);
+            btn_start = itemView.findViewById(R.id.btn_start);
+            left_view = itemView.findViewById(R.id.left_view);
+            right_view = itemView.findViewById(R.id.right_view);
         }
     }
 
