@@ -120,6 +120,19 @@
         <activity android:name=".activities.RecyclerviewSwipeDefineActivity"
             android:theme="@style/AppThemeNoActionBar"
             ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeDragActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewDragMenuActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeDragGridActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewSwipeDragDefineActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+
     </application>
 
 </manifest>

@@ -29,6 +29,15 @@ public class RecyclerviewMultiActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btn_drag = findViewById(R.id.btn_drag);
+        btn_drag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, RecyclerviewDragMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

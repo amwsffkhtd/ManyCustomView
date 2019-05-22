@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,17 +15,26 @@
             android:padding="10dp"
             >
             <Button
-                android:id="@+id/btn_swipe_menu"
+                android:id="@+id/btn_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="侧滑菜单"
+                android:text="list item拖拽和侧滑删除"
                 />
             <Button
-                android:id="@+id/btn_drag"
+                android:id="@+id/btn_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="拖拽Item"
+                android:text="grid拖拽"
                 />
+
+
+            <Button
+                android:id="@+id/btn_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义拖拽参数（不同的ViewType）"
+                />
+
         </LinearLayout>
 
     </ScrollView>
