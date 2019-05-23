@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,35 +15,18 @@
             android:padding="10dp"
             >
             <Button
-                android:id="@+id/btn_swipe_menu"
+                android:id="@+id/btn_default"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="侧滑菜单"
+                android:text="默认样式"
                 />
             <Button
-                android:id="@+id/btn_drag"
+                android:id="@+id/btn_custom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="拖拽Item"
+                android:text="自定义样式"
                 />
-            <Button
-                android:id="@+id/btn_head_footer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Header and Footer"
-                />
-            <Button
-                android:id="@+id/btn_load"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="上拉加载"
-                />
-            <Button
-                android:id="@+id/btn_nest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="嵌套在滑动布局中的使用方法"
-                />
+
         </LinearLayout>
 
     </ScrollView>

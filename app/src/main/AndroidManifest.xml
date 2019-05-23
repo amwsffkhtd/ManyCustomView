@@ -132,6 +132,29 @@
         <activity android:name=".activities.RecyclerviewSwipeDragDefineActivity"
             android:theme="@style/AppThemeNoActionBar"
             ></activity>
+        <activity android:name=".activities.RecyclerviewHeaderFooterActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewLoadActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewLoadMenuActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewLoadDefineActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+        <activity android:name=".activities.RecyclerviewNestMenuActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+
+        <activity android:name=".activities.RecyclerviewNestCardViewActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
+
+        <activity android:name=".activities.RecyclerviewNestDrawerlayoutActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
 
     </application>
 

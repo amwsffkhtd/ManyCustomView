@@ -37,8 +37,31 @@ public class RecyclerviewMultiActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btn_head_footer = findViewById(R.id.btn_head_footer);
+        btn_head_footer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, RecyclerviewHeaderFooterActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button btn_load = findViewById(R.id.btn_load);
+        btn_load.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, RecyclerviewLoadMenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
-
+        Button btn_nest = findViewById(R.id.btn_nest);
+        btn_nest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, RecyclerviewNestMenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

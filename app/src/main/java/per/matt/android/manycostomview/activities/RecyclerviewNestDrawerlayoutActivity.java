@@ -3,12 +3,13 @@ package per.matt.android.manycostomview.activities;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.yanzhenjie.recyclerview.OnItemMenuClickListener;
@@ -22,9 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import per.matt.android.manycostomview.R;
+import per.matt.android.manycostomview.adapter.CardviewAdapter;
 import per.matt.android.manycostomview.adapter.TitleAdapter;
 
-public class RecyclerviewSwipeListActivity extends AppCompatActivity {
+public class RecyclerviewNestDrawerlayoutActivity extends AppCompatActivity {
 
     private Context mContext;
 
@@ -35,30 +37,34 @@ public class RecyclerviewSwipeListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recyclerview_swipe_list);
+        setContentView(R.layout.activity_recyclerview_nest_drawer);
         mContext=this;
-        mList=createDataList();
-        mAdapter=new TitleAdapter(mList);
-        recyclerview = findViewById(R.id.recyclerview);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Drawerlayout");
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name,
+                R.string.app_name);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+
+        mList=createDataList();
+
+        recyclerview = findViewById(R.id.recyclerview);
         recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
+
         /**
          * 事件绑定必须在setAdapter之前
          */
         recyclerview.setSwipeMenuCreator(swipeMenuCreator);
         recyclerview.setOnItemMenuClickListener(mMenuItemClickListener);
 
+        mAdapter=new TitleAdapter(mList);
         recyclerview.setAdapter(mAdapter);
 
-
-        TextView tv_title = findViewById(R.id.tv_title);
-        tv_title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recyclerview.smoothOpenLeftMenu(0);
-            }
-        });
     }
+
+
 
     private List<String> createDataList() {
         List<String> dataList = new ArrayList<>();
@@ -81,20 +87,20 @@ public class RecyclerviewSwipeListActivity extends AppCompatActivity {
             // 3. WRAP_CONTENT，自身高度，不推荐;
             int height = ViewGroup.LayoutParams.MATCH_PARENT;
 
-            // 添加左侧的，如果不添加，则左侧不会出现菜单。
-            {
-                SwipeMenuItem addItem = new SwipeMenuItem(mContext).setBackground(R.drawable.selector_green)
-                        .setImage(R.drawable.ic_action_add)
-                        .setWidth(width)
-                        .setHeight(height);
-                swipeLeftMenu.addMenuItem(addItem); // 添加菜单到左侧。
-
-                SwipeMenuItem closeItem = new SwipeMenuItem(mContext).setBackground(R.drawable.selector_red)
-                        .setImage(R.drawable.ic_action_close)
-                        .setWidth(width)
-                        .setHeight(height);
-                swipeLeftMenu.addMenuItem(closeItem); // 添加菜单到左侧。
-            }
+//            // 添加左侧的，如果不添加，则左侧不会出现菜单。
+//            {
+//                SwipeMenuItem addItem = new SwipeMenuItem(mContext).setBackground(R.drawable.selector_green)
+//                        .setImage(R.drawable.ic_action_add)
+//                        .setWidth(width)
+//                        .setHeight(height);
+//                swipeLeftMenu.addMenuItem(addItem); // 添加菜单到左侧。
+//
+//                SwipeMenuItem closeItem = new SwipeMenuItem(mContext).setBackground(R.drawable.selector_red)
+//                        .setImage(R.drawable.ic_action_close)
+//                        .setWidth(width)
+//                        .setHeight(height);
+//                swipeLeftMenu.addMenuItem(closeItem); // 添加菜单到左侧。
+//            }
 
             // 添加右侧的，如果不添加，则右侧不会出现菜单。
             {
@@ -136,4 +142,5 @@ public class RecyclerviewSwipeListActivity extends AppCompatActivity {
             }
         }
     };
+
 }

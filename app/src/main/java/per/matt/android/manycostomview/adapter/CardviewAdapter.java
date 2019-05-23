@@ -4,8 +4,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
-
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -17,17 +18,17 @@ import per.matt.android.manycostomview.R;
  * Created by matth on 2018/7/31.
  */
 
-public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHolder> {
+public class CardviewAdapter extends RecyclerView.Adapter<CardviewAdapter.ReportViewHolder> {
 
     private List<String> mList;
 
-    public TitleAdapter(List<String> list) {
+    public CardviewAdapter(List<String> list) {
         this.mList = list;
     }
 
     @Override
     public ReportViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_card, parent, false);
         ReportViewHolder limitViewHolder = new ReportViewHolder(view);
         return limitViewHolder;
     }
@@ -36,10 +37,7 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHo
         this.mList = list;
         notifyDataSetChanged();
     }
-    public void loadMore(List<String> list, int posStart, int size){
-        this.mList=list;
-        notifyItemRangeInserted(posStart,size);
-    }
+
 
     @Override
     public void onBindViewHolder(final ReportViewHolder holder, int position) {
@@ -58,6 +56,13 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ReportViewHo
         public ReportViewHolder(View itemView) {
             super(itemView);
             tv_title = itemView.findViewById(R.id.tv_title);
+
+            ((CardView)itemView).getChildAt(0).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(), "第" + getAdapterPosition() + "个", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 
